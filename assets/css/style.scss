@@ -177,7 +177,10 @@ button[z*="assets/img/level5/icon1.png"]:hover{
 }
 .pokemon-body__feet{
   height: 355px;
-  // display: contents;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 //responsive
 @media (max-width: 1023px){
@@ -204,6 +207,9 @@ button[z*="assets/img/level5/icon1.png"]:hover{
     .text{
       font-size: 10px;
     }
+  }
+  .pokemon-body__feet{
+    display: block;
   }
 }
 /* Mobile */
