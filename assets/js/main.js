@@ -13,14 +13,14 @@ const nodeText =$('.text');
 function loadImg() {
     var arr = [];
     for (var i = 1; i <= 18; i++) {
-        arr.push('img/level'+currentLevel+'/icon' + i + '.png')
+        arr.push('assets/img/level'+currentLevel+'/icon' + i + '.png')
     }
     return arr;
 }
 function loadB() {
     var arr = [];
     for (var i = 1; i <= 14; i++) {
-        arr.push('img/background/b' + i + '.jpg')
+        arr.push('assets/img/background/b' + i + '.jpg')
     }
     return arr;
 }
@@ -318,7 +318,7 @@ function main() {
         nodeText.html('Bạn chỉ có 150 giây ban đầu, nếu bạn chọn đúng thì sẽ cộng thêm 4 giây thời gian!')
     }
     score = 0;
-    $('.btn-item img[src*="img/level3/icon1.png"]').click(function (){
+    $('.btn-item img[src*="assets/img/level3/icon1.png"]').click(function (){
         alert("Game over");
         currentLevel=0;
         level();
@@ -373,7 +373,7 @@ function createLevel() {
     main();
     scores();
 }
-$('button[z*="img/level5/icon1.png"]').attr('disabled','true');
+$('button[z*="assets/img/level5/icon1.png"]').attr('disabled','true');
 function checkWin(){
     var isFoundArr = false;
     if(currentLevel==1){
@@ -389,7 +389,7 @@ function checkWin(){
     else if(currentLevel==2){
         loop:for (var i = 1; i < arr.length - 1; i++) {
             for (var j = 1; j < arr[i].length - 1; j++) {
-                if (arr[i][j] == "img/level2/icon1.png") {
+                if (arr[i][j] == "assets/img/level2/icon1.png") {
                     isFoundArr = true;
                     break loop;
 
@@ -402,7 +402,7 @@ function checkWin(){
     else if(currentLevel==3){
         loop:for (var i = 1; i < arr.length - 1; i++) {
             for (var j = 1; j < arr[i].length - 1; j++) {
-                if (arr[i][j]!=0 && arr[i][j] != "img/level3/icon1.png") {
+                if (arr[i][j]!=0 && arr[i][j] != "assets/img/level3/icon1.png") {
                     isFoundArr = true;
                     break loop;
 
@@ -427,7 +427,7 @@ function checkWin(){
     else if(currentLevel==5){
         loop:for (var i = 1; i < arr.length - 1; i++) {
             for (var j = 1; j < arr[i].length - 1; j++) {
-                if (arr[i][j]!=0 && arr[i][j] != "img/level4/icon1.png") {
+                if (arr[i][j]!=0 && arr[i][j] != "assets/img/level4/icon1.png") {
                     isFoundArr = true;
                     break loop;
                 }
